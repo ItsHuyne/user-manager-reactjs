@@ -5,10 +5,10 @@ const SideBar = () => {
     return (
         <div className='sidebar'>
         {!showSidebar ? (
-          <button
+          <button>
             className="flex text-4xl text-white items-center cursor-pointer fixed right-10 top-6 z-50"
             onClick={() => setShowSidebar(!showSidebar)}
-          >
+          
             xgsadgas
           </button>
         )  :
