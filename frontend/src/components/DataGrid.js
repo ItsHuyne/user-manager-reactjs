@@ -6,7 +6,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import { axiosClient } from '../helper/helper';
 import { useAuthStore } from '../store/store';
-
+import axios from 'axios';
 
 const isAdmin = sessionStorage.getItem('isAdmin');
 const userId = sessionStorage.getItem('userId');
@@ -37,11 +37,12 @@ const columns = [
     width: 80,
     getActions: (params) => [
       <GridActionsCellItem
-        key={params.id}
+        key={params.row_id}
         icon={<DeleteIcon />}
         label="Delete"
         showInMenu
         disabled={isAdmin === 'false'}
+        onClick={() => handleDelete(params.row_id)}
       />,
       <GridActionsCellItem
         key={params.id}
@@ -53,6 +54,21 @@ const columns = [
     ]
   }
 ];
+function handleDelete(id) {
+  axios.delete('http://localhost:8000/api/deleteuser', {
+      params: {id: id},
+    })
+    .then(response => {
+      if (response.data.success) {
+        console.log(response.data.message);
+      } else {
+       console.log(response.data.message);
+      }
+    })
+    .catch(error => {
+      console.error(error);
+    });
+}
 
 const rows = [
   { id: 1, lastName: 'Snow', firstName: 'Jon', adress:  35 },
