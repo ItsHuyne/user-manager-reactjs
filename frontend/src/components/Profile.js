@@ -46,7 +46,7 @@ export default function Profile() {
       if (!!user.isAdmin) {
         navigate('/admin');
       } else {
-        navigate('/user');
+        navigate('/admin');
       }
       toast.promise(updatePromise, {
         loading: 'Updating...',

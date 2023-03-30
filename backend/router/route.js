@@ -25,6 +25,5 @@ router.route('/createResetSession').get(controller.createResetSession) // reset 
 /** PUT Methods */
 router.route('/updateuser').put(Auth, controller.updateUser); // is use to update the user profile
 router.route('/resetPassword').put(controller.verifyUser, controller.resetPassword); // use to reset password
-router.route('/deleteuser').put(Auth, controller.deleteUser)// delete user
-
+router.route('/deleteuser/:id').delete(Auth, controller.deleteUser)// delete user
 export default router;

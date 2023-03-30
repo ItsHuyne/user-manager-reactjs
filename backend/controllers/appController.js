@@ -151,6 +151,7 @@ export async function getAllUsers (req, res) {
   };
 //   delete user
 export async function deleteUser (req, res) {
+    console.log(req.params.id)
     try {
       await UserModel.findByIdAndDelete(req.params.id);
       res.status(200).json("User deleted");

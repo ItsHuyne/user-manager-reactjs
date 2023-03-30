@@ -37,12 +37,13 @@ const columns = [
     width: 80,
     getActions: (params) => [
       <GridActionsCellItem
-        key={params.row_id}
-        icon={<DeleteIcon />}
-        label="Delete"
-        showInMenu
-        disabled={isAdmin === 'false'}
-        onClick={() => handleDelete(params.row_id)}
+      key={params.row._id}
+      icon={<DeleteIcon />}
+      label="Delete"
+      showInMenu
+      disabled={isAdmin === 'false'}
+      onClick={() => handleDelete(params.row._id)}  
+      // onClick={() => console.log(params)}
       />,
       <GridActionsCellItem
         key={params.id}
@@ -51,12 +52,15 @@ const columns = [
         showInMenu
         disabled={params.id !== userId}
       />
+    
     ]
   }
 ];
+
+const token = localStorage.getItem('token');
 function handleDelete(id) {
-  axios.delete('http://localhost:8000/api/deleteuser', {
-      params: {id: id},
+  axios.delete(`http://localhost:8000/api/deleteuser/${id}`, {
+      headers: { Authorization: `Bearer ${token}` }
     })
     .then(response => {
       if (response.data.success) {
