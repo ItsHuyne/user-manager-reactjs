@@ -2,7 +2,7 @@ import axios from 'axios';
 import jwt_decode from 'jwt-decode';
 
 export const axiosClient = axios.create({
-  baseURL: 'http://localhost:8001'
+  baseURL: 'http://localhost:8000'
 });
 
 /** Make API Requests */
@@ -127,3 +127,5 @@ export async function resetPassword({ username, password }) {
     return Promise.reject({ error });
   }
 }
+
+

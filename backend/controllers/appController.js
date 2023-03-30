@@ -140,6 +140,25 @@ export async function login(req,res){
     }
 }
 
+// get all user
+export async function getAllUsers (req, res) {
+    try {
+      const user = await UserModel.find();
+      res.status(200).json(user);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  };
+//   delete user
+export async function deleteUser (req, res) {
+    try {
+      await UserModel.findByIdAndDelete(req.params.id);
+      res.status(200).json("User deleted");
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  };
+
 
 /** GET: http://localhost:8080/api/user/example123 */
 export async function getUser(req,res){

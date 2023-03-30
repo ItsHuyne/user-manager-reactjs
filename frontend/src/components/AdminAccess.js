@@ -4,7 +4,7 @@ import DataGridMem from './DataGrid';
 const AdminAccess = () => {
     return (
         <>
-        <SideBar/>
+        <SideBar className= 'sidebar '/>
         <DataGridMem/>
         </>
     );
