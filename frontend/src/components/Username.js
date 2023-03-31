@@ -27,7 +27,7 @@ export default function Username() {
   })
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto justify-center">
 
       <Toaster position='top-center' reverseOrder={false}></Toaster>
 

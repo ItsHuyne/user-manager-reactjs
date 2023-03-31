@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import { icon } from '@fortawesome/fontawesome-svg-core/import.macro'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

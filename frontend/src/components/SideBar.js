@@ -1,3 +1,5 @@
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { useState } from "react";
 const SideBar = () => {
@@ -5,24 +7,10 @@ const SideBar = () => {
   return (
     <React.Fragment>
       <button
-        className="flex text-4xl text-black items-center cursor-pointer fixed left-10 top-6 z-50"
+        className="flex text-4xl text-black items-center cursor-pointer fixed left-1 top-1 z-50text-cyan-700		"
         onClick={() => setShowSidebar(!showSidebar)}
       >
-        black
-        <svg
-          fill="none"
-          stroke="#2f2f2f "
-          stroke-width="1.5"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-          ></path>
-        </svg>
+        <FontAwesomeIcon icon={faBars} beat size="2xs" />
       </button>
 
       {showSidebar && (
@@ -51,90 +39,6 @@ const SideBar = () => {
                       />
                     </svg>
                     <span className="ml-3 font-bold">Dashboard</span>
-                  </a>
-                </div>
-              </div>
-              {/* <!-- item --> */}
-              <div className="mb-4">
-                <div className="flex w-full items-center justify-between">
-                  <a className="flex w-full cursor-pointer items-center rounded-lg px-4 py-2 transition duration-300 ease-in-out hover:bg-zinc-800 hover:text-white">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      className="bi bi-cloud-rain-heavy-fill"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M4.176 11.032a.5.5 0 0 1 .292.643l-1.5 4a.5.5 0 0 1-.936-.35l1.5-4a.5.5 0 0 1 .644-.293zm3 0a.5.5 0 0 1 .292.643l-1.5 4a.5.5 0 0 1-.936-.35l1.5-4a.5.5 0 0 1 .644-.293zm3 0a.5.5 0 0 1 .292.643l-1.5 4a.5.5 0 0 1-.936-.35l1.5-4a.5.5 0 0 1 .644-.293zm3 0a.5.5 0 0 1 .292.643l-1.5 4a.5.5 0 0 1-.936-.35l1.5-4a.5.5 0 0 1 .644-.293zm.229-7.005a5.001 5.001 0 0 0-9.499-1.004A3.5 3.5 0 1 0 3.5 10H13a3 3 0 0 0 .405-5.973z" />
-                    </svg>
-                    <span className="ml-3 font-bold">Weather</span>
-                  </a>
-                </div>
-              </div>
-              {/* <!-- item --> */}
-              <div className="mb-4 flex flex-col">
-                {/* <!-- Main sidebar items --> */}
-                <div className="flex w-full items-center justify-between">
-                  <a className="flex w-full cursor-pointer items-center rounded-lg px-4 py-2 transition duration-300 ease-in-out hover:bg-zinc-800 hover:text-white">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      className="bi bi-envelope-fill"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
-                    </svg>
-                    <span className="ml-3 font-bold">Inbox</span>
-                  </a>
-                  <button className="ml-4 h-full cursor-pointer px-4 py-2 transition duration-300 ease-in-out hover:text-white">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      className="bi bi-caret-down-fill"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-                    </svg>
-                  </button>
-                </div>
-                {/* <!-- Main sidebar item sub menu --> */}
-                <ul className="ml-6 mt-2 w-full border-l-2 border-zinc-800 pl-6 text-sm">
-                  <li className="mb-4 transition duration-300 ease-in-out hover:text-white">
-                    <a href="#">All emails</a>
-                  </li>
-                  <li className="mb-4 transition duration-300 ease-in-out hover:text-white">
-                    <a href="#">Spam emails</a>
-                  </li>
-                  <li className="transition duration-300 ease-in-out hover:text-white">
-                    <a href="#" className="flex items-center">
-                      Favorites
-                      <span className="ml-4 flex h-8 w-8 items-center justify-center rounded-full bg-zinc-800 text-xs">
-                        78
-                      </span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              {/* <!-- item --> */}
-              <div className="mb-4">
-                <div className="flex w-full items-center justify-between">
-                  <a className="flex w-full cursor-pointer items-center rounded-lg px-4 py-2 transition duration-300 ease-in-out hover:bg-zinc-800 hover:text-white">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      className="bi bi-archive-fill"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M12.643 15C13.979 15 15 13.845 15 12.5V5H1v7.5C1 13.845 2.021 15 3.357 15h9.286zM5.5 7h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1zM.8 1a.8.8 0 0 0-.8.8V3a.8.8 0 0 0 .8.8h14.4A.8.8 0 0 0 16 3V1.8a.8.8 0 0 0-.8-.8H.8z" />
-                    </svg>
-                    <span className="ml-3 font-bold">Archive</span>
                   </a>
                 </div>
               </div>

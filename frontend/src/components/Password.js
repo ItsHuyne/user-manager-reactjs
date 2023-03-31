@@ -44,7 +44,7 @@ export default function Password() {
   if(serverError) return <h1 className='text-xl text-red-500'>{serverError.message}</h1>
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto justify-center">
 
       <Toaster position='top-center' reverseOrder={false}></Toaster>
 
