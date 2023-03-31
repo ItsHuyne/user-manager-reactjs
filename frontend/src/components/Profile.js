@@ -42,12 +42,8 @@ export default function Profile() {
     onSubmit: async (values) => {
       values = await Object.assign(values, { profile: file || apiData?.profile || '' });
       let updatePromise = updateUser(values);
-      console.log(user);
-      if (!!user.isAdmin) {
-        navigate('/admin');
-      } else {
-        navigate('/admin');
-      }
+      navigate('/admin');
+      
       toast.promise(updatePromise, {
         loading: 'Updating...',
         success: <b>Update Successfully...!</b>,

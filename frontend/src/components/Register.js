@@ -19,7 +19,8 @@ export default function Register() {
     initialValues : {
       email: '',
       username: '',
-      password : ''
+      password : '',
+      confirm : ''
     },
     validate : registerValidation,
     validateOnBlur: false,

@@ -9,7 +9,7 @@ export default {
 
     EXPIRED_REFRESH_KEY: "1d",
     
-    MAIL: "tiana90@ethereal.email",
-    PASSWORD:"PWkWRFAsF3tr4p48Xb"
+    MAIL: "madie.carter@ethereal.email",
+    PASSWORD:"Xm5Yh5Asn19dnneaAU"
     
 }
