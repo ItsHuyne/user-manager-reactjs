@@ -27,8 +27,8 @@ const columns = [
     editable: false
   },
   {
-    field: 'adress',
-    headerName: 'adress',
+    field: 'address',
+    headerName: 'address',
     flex: 2,
     editable: false
   },

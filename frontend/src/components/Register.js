@@ -45,12 +45,12 @@ export default function Register() {
   }
 
   return (
-    <div className="container mx-auto">
+    <div className="container  justify-center">
 
       <Toaster position='top-center' reverseOrder={false}></Toaster>
 
       <div className='flex justify-center items-center h-screen'>
-        <div className={styles.glass} style={{ width: "45%", paddingTop: '3em'}}>
+        <div className={styles.glass} style={{ width: "100%", paddingTop: '3em', paddingLeft: '5rem',paddingRight: '5rem'}}>
 
           <div className="title flex flex-col items-center">
             <h4 className='text-5xl font-bold'>Register</h4>
